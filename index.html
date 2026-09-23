@@ -186,6 +186,11 @@
     
     document.querySelector('#ticket-form').addEventListener('submit', (event) => {
       event.preventDefault();
+      window.open(
+  'https://airtable.com/appnKP9CJGbetH2ka/pagqfACoD7nS8nu6R/form',
+  '_blank',
+  'noopener,noreferrer'
+);
       const form = new FormData(event.currentTarget);
       document.querySelector('#ticket-name').textContent = form.get('name');
       const code = 'SB-' + Math.random().toString(36).slice(2, 8).toUpperCase();
